@@ -217,6 +217,11 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Jake Luer";
+				TargetAttributes = {
+					113011CE16A10E74008A3718 = {
+						DevelopmentTeam = VKWM2EH5WD;
+					};
+				};
 			};
 			buildConfigurationList = 113011C916A10E74008A3718 /* Build configuration list for PBXProject "apnagent" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -394,13 +399,13 @@
 		1130120916A10E75008A3718 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_ID = com.logicalparadox.apnagent;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				BUNDLE_ID = kairos.apnagent;
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: kairos.apnagent";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "apnagent/apnagent-Prefix.pch";
 				INFOPLIST_FILE = "apnagent/apnagent-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -411,13 +416,13 @@
 		1130120A16A10E75008A3718 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_ID = com.logicalparadox.apnagent;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				BUNDLE_ID = kairos.apnagent;
+				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: kairos.apnagent";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "apnagent/apnagent-Prefix.pch";
 				INFOPLIST_FILE = "apnagent/apnagent-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
