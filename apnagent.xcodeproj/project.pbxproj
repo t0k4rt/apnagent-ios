@@ -25,6 +25,9 @@
 		2800B36A16CE7E4500EF4E16 /* apnListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2800B36916CE7E4500EF4E16 /* apnListVC.m */; };
 		2800B37116D228A900EF4E16 /* PushNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 2800B37016D228A900EF4E16 /* PushNotification.m */; };
 		28E0AE621701956F008881E7 /* apnDetailsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E0AE611701956F008881E7 /* apnDetailsVC.m */; };
+		ACD31D911823C5CF00E69CDC /* PushToken.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD31D901823C5CF00E69CDC /* PushToken.m */; };
+		ACD31D941823C7EE00E69CDC /* settings.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD31D931823C7EE00E69CDC /* settings.m */; };
+		E3D34938D6FB4D279B3C80F7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C2ABD223EB14FD5B990AA39 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,12 @@
 		2800B37016D228A900EF4E16 /* PushNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushNotification.m; sourceTree = "<group>"; };
 		28E0AE601701956F008881E7 /* apnDetailsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = apnDetailsVC.h; sourceTree = "<group>"; };
 		28E0AE611701956F008881E7 /* apnDetailsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = apnDetailsVC.m; sourceTree = "<group>"; };
+		5C2ABD223EB14FD5B990AA39 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B38D7569F5E4CFFA305257A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		ACD31D8F1823C5CF00E69CDC /* PushToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushToken.h; sourceTree = "<group>"; };
+		ACD31D901823C5CF00E69CDC /* PushToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushToken.m; sourceTree = "<group>"; };
+		ACD31D921823C7EE00E69CDC /* settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settings.h; sourceTree = "<group>"; };
+		ACD31D931823C7EE00E69CDC /* settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settings.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +83,7 @@
 				113011D416A10E75008A3718 /* UIKit.framework in Frameworks */,
 				113011D616A10E75008A3718 /* Foundation.framework in Frameworks */,
 				113011D816A10E75008A3718 /* CoreGraphics.framework in Frameworks */,
+				E3D34938D6FB4D279B3C80F7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +107,7 @@
 				113011FD16A10E75008A3718 /* apnagentTests */,
 				113011D216A10E75008A3718 /* Frameworks */,
 				113011D016A10E75008A3718 /* Products */,
+				6B38D7569F5E4CFFA305257A /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,6 +127,7 @@
 				113011D516A10E75008A3718 /* Foundation.framework */,
 				113011D716A10E75008A3718 /* CoreGraphics.framework */,
 				113011F716A10E75008A3718 /* SenTestingKit.framework */,
+				5C2ABD223EB14FD5B990AA39 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -133,6 +145,10 @@
 				2800B37016D228A900EF4E16 /* PushNotification.m */,
 				113011EB16A10E75008A3718 /* MainStoryboard.storyboard */,
 				113011DA16A10E75008A3718 /* Supporting Files */,
+				ACD31D8F1823C5CF00E69CDC /* PushToken.h */,
+				ACD31D901823C5CF00E69CDC /* PushToken.m */,
+				ACD31D921823C7EE00E69CDC /* settings.h */,
+				ACD31D931823C7EE00E69CDC /* settings.m */,
 			);
 			path = apnagent;
 			sourceTree = "<group>";
@@ -177,9 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1130120816A10E75008A3718 /* Build configuration list for PBXNativeTarget "apnagent" */;
 			buildPhases = (
+				05085BFC48BF4F45AA9EEDA5 /* Check Pods Manifest.lock */,
 				113011CB16A10E74008A3718 /* Sources */,
 				113011CC16A10E74008A3718 /* Frameworks */,
 				113011CD16A10E74008A3718 /* Resources */,
+				26114C6DF0A24D07AC5D1E86 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -265,6 +283,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		05085BFC48BF4F45AA9EEDA5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		113011F416A10E75008A3718 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,6 +311,21 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		26114C6DF0A24D07AC5D1E86 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -286,6 +334,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				113011E016A10E75008A3718 /* main.m in Sources */,
+				ACD31D911823C5CF00E69CDC /* PushToken.m in Sources */,
+				ACD31D941823C7EE00E69CDC /* settings.m in Sources */,
 				113011E416A10E75008A3718 /* AppDelegate.m in Sources */,
 				2800B36A16CE7E4500EF4E16 /* apnListVC.m in Sources */,
 				2800B37116D228A900EF4E16 /* PushNotification.m in Sources */,
@@ -398,6 +448,7 @@
 		};
 		1130120916A10E75008A3718 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B38D7569F5E4CFFA305257A /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_ID = kairos.apnagent;
 				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: kairos.apnagent";
@@ -415,6 +466,7 @@
 		};
 		1130120A16A10E75008A3718 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B38D7569F5E4CFFA305257A /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_ID = kairos.apnagent;
 				CODE_SIGN_IDENTITY = "Apple Development IOS Push Services: kairos.apnagent";

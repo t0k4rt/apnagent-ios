@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "PushNotification.h"
+#import "PushToken.h"
 
 @implementation AppDelegate
 
@@ -58,11 +59,15 @@
 - (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
 {
 	NSLog(@"My token is: %@", deviceToken);
+    PushToken *pushToken = [[PushToken alloc] initWithToken: deviceToken];
+    [pushToken showToken];
+    [pushToken sendToken];
 }
 
 - (void)application:(UIApplication*)application didFailToRegisterForRemoteNotificationsWithError:(NSError*)error
 {
 	NSLog(@"Failed to get token, error: %@", error);
+    
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
