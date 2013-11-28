@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "settings.h"
 
 @interface PushToken : NSObject
 

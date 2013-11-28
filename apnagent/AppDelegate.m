@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "PushNotification.h"
 #import "PushToken.h"
+#import "NotificationListManager.h"
 
 @implementation AppDelegate
 
@@ -26,6 +27,9 @@
   if (payload)
     [self.pnListVC addPushNotifWithType:PushNotifTypeTM andUserInfo:payload];
   
+  //load notifications
+  [NotificationListManager refreshNotifications];
+    
   return YES;
 }
             

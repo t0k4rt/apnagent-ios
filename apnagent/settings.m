@@ -11,10 +11,11 @@
 @implementation settings
 
 @synthesize baseUrl;
-
 @synthesize subscribeEndpoint;
+@synthesize getNotificationEndpoint;
 
-+ (id)sharedSettings {
++ (id)sharedSettings
+{
     static settings *sharedSettings = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -31,6 +32,7 @@
         
         self->baseUrl = @"http://kairosapns.herokuapp.com";
         self->subscribeEndpoint = @"/api/subscribe";
+        self->getNotificationEndpoint = @"/api/notification";
     
     }
     return self;
@@ -46,4 +48,26 @@
     return result;
 }
 
+
+-(NSMutableString*)getNotificationUrlWithId: (NSInteger *) _startId
+{
+    NSMutableString *result  = [NSMutableString string];
+    [result appendString:self.baseUrl];
+    [result appendString:self.getNotificationEndpoint];
+    [result appendString:@"/"];
+    NSString *startId = [NSString stringWithFormat:@"%i", _startId];
+    [result appendString:startId];
+    NSLog(@"%@",result);
+    return result;
+}
+
+
+-(NSMutableString*)getNotificationUrl
+{
+    NSMutableString *result  = [NSMutableString string];
+    [result appendString:self.baseUrl];
+    [result appendString:self.getNotificationEndpoint];
+    NSLog(@"%@",result);
+    return result;
+}
 @end

@@ -8,7 +8,6 @@
 
 #import <AFNetworking.h>
 #import "PushToken.h"
-#import "settings.h"
 
 @implementation PushToken
 
@@ -35,7 +34,8 @@
     NSLog(@"%@",self.token);
 }
 
-- (void)sendToken {
+- (void)sendToken
+{
     
     NSLog(@"Sending token");
     
